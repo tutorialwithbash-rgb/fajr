@@ -84,17 +84,3 @@ applications/
     └── requirements.txt
 ```
 
-## Roadmap
-
-The current implementation is intentionally minimal.
-Future iterations will add:
-
-- Docker support
-- Reverse proxy integration
-- Database connectivity
-- Configuration management
-- Logging
-- Metrics
-- Authentication
-- Testing
-- CI/CD integration
