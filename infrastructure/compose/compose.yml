@@ -6,10 +6,18 @@ services:
 
     container_name: fastapi
 
-    ports:
-      - "5000:5000"
-
     env_file:
       - ../../applications/FastAPI/.env
 
-    restart: unless-stopped
+  nginx:
+    build:
+      context: ../../
+      dockerfile: infrastructure/images/gateway/nginx/Dockerfile
+
+    container_name: nginx
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      - fastapi
