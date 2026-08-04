@@ -1,0 +1,15 @@
+services:
+  fastapi:
+    build:
+      context: ../../
+      dockerfile: infrastructure/images/applications/FastAPI/Dockerfile
+
+    container_name: fastapi
+
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - ../../applications/FastAPI/.env
+
+    restart: unless-stopped
