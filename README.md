@@ -8,216 +8,40 @@
 
 ---
 
-## Vision
+## What is Fajr?
 
-Fajr is an open-source engineering platform built to simulate how modern production systems are designed, deployed, monitored, secured, and operated.
+Fajr is an open-source engineering platform that simulates how modern production systems are designed, deployed, monitored, secured, and operated. It integrates infrastructure, networking, containerization, cloud services, observability, CI/CD, security, and AI workloads into a single production-inspired ecosystem.
 
-Rather than demonstrating isolated technologies, the platform integrates infrastructure, networking, containerization, cloud services, observability, CI/CD, security, and AI workloads into a single production-inspired ecosystem.
+## What this repository contains
 
-The primary goal is to showcase practical Platform Engineering by building a system that evolves from local development to a scalable cloud-native platform.
+- `applications/` — application code and service modules.
+- `infrastructure/` — local orchestration and platform deployment configuration.
+- `nginx/` — edge gateway and reverse proxy configuration.
+- `docs/` — onboarding, architecture, development, roadmap, and release guides.
 
----
+## Getting started
 
-# Objectives
+1. Read `docs/getting-started.md`.
+2. Review `docs/architecture.md`.
+3. Follow `docs/development.md`.
 
-Fajr is designed to demonstrate:
+## Current foundation release
 
-- Platform Engineering
-- DevOps Engineering
-- Cloud Engineering
-- Infrastructure as Code (IaC)
-- Kubernetes
-- Containerization
-- AI Infrastructure
-- MLOps
-- Production Networking
-- CI/CD Automation
-- Observability
-- Security Engineering
-- Distributed Systems
+The current version includes:
 
----
-
-# Repository Architecture
-
-```text
-fajr/
-│
-├── applications/
-│   ├── FastAPI/
-│   ├── Node/
-│   ├── Frontend/
-│   └── AI/
-│
-├── infrastructure/
-│   ├── compose/
-│   ├── images/
-│   ├── kubernetes/
-│   ├── terraform/
-│   ├── networking/
-│   └── cloud/
-│
-├── nginx/
-│
-├── monitoring/
-│
-├── security/
-│
-├── scripts/
-│
-├── docs/
-│
-└── README.md
-```
-
-Each module is developed independently while integrating into the overall platform architecture.
-
----
-
-# Platform Modules
-
-| Module | Description |
-|---------|-------------|
-| **Applications** | Backend APIs, frontend applications, AI services and supporting workloads. |
-| **Docker Compose** | Local multi-container development environment. |
-| **Container Images** | Docker image definitions for platform services. |
-| **Nginx** | Edge gateway, reverse proxy, load balancing, TLS, routing and AI gateway. |
-| **Terraform** | Infrastructure as Code for cloud resource provisioning. |
-| **Kubernetes** | Production container orchestration. |
-| **Monitoring** | Metrics, dashboards, logging, tracing and alerting. |
-| **Security** | Secrets management, hardening, policies and authentication. |
-| **Networking** | Internal platform networking and service communication. |
-| **Documentation** | Technical documentation and architecture references. |
-
----
-
-# Current Components
-
-Current implementation includes:
-
-- FastAPI service
+- FastAPI application
 - Docker Compose environment
 - Docker image definitions
 - Nginx gateway
 - Health check endpoint
-- Modular project structure
 
-Additional platform components will be introduced incrementally.
+## Documentation
 
----
-
-# Development Philosophy
-
-Fajr follows an incremental engineering approach.
-
-Rather than building everything at once, each feature is introduced through dedicated modules and feature branches while maintaining a working platform.
-
-This mirrors how production engineering teams evolve infrastructure over time.
-
----
-
-# Roadmap
-
-## Version 0.1.0 — Foundation
-
-- Repository structure
-- FastAPI application
-- Docker Compose
-- Docker images
-- Nginx gateway
-- Basic documentation
-
----
-
-## Planned Milestones
-
-### 0.2.0 — Networking
-
-- Docker networking
-- DNS
-- Service discovery
-- Internal communication
-
----
-
-### 0.3.0 — Container Platform
-
-- Multi-stage Docker builds
-- Image optimization
-- Registry integration
-- Container lifecycle
-
----
-
-### 0.4.0 — Traffic Management
-
-- Reverse proxy
-- Path routing
-- Load balancing
-- Static content
-- TLS
-- Compression
-- Caching
-- Rate limiting
-
----
-
-### 0.5.0 — Security
-
-- Secrets management
-- Authentication
-- Authorization
-- Container security
-- Network policies
-
----
-
-### 0.6.0 — Observability
-
-- Prometheus
-- Grafana
-- Loki
-- Alertmanager
-- Distributed tracing
-
----
-
-### 0.7.0 — Applications
-
-- Additional backend services
-- Frontend application
-- Redis
-- PostgreSQL
-- Message queues
-- AI inference service
-
----
-
-### 0.8.0 — Kubernetes
-
-- Deployments
-- Services
-- Ingress
-- ConfigMaps
-- Secrets
-- Helm
-- Autoscaling
-
----
-
-### 0.9.0 — Cloud Infrastructure
-
-- Terraform
-- AWS
-- Networking
-- Storage
-- Managed databases
-- IAM
-- Infrastructure provisioning
-
----
-
-### 1.0.0 — Production Platform
+- `docs/getting-started.md` — how to run Fajr
+- `docs/architecture.md` — platform design and diagrams
+- `docs/development.md` — development workflow
+- `docs/roadmap.md` — future milestones
+- `docs/releases.md` — release history
 
 A fully integrated platform demonstrating production-grade Platform Engineering, DevOps, Cloud Engineering, and MLOps.
 

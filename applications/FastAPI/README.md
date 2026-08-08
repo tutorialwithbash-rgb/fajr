@@ -1,21 +1,56 @@
 # FastAPI Service
 
-This service is the initial FastAPI application for the Fajr platform.
+This module contains the FastAPI application used by the Fajr platform.
 
-## Features
+## Purpose
 
-- FastAPI application
-- Health check endpoint
-- Interactive API documentation
+The FastAPI service provides the initial application workload for the platform, including an HTTP API and a health endpoint. It is designed to be lightweight and easy to extend as the platform evolves.
 
-## Requirements
+## Responsibilities
 
-- Python 3.13+
-- FastAPI
-- Uvicorn
-- pydantic-settings
+- Expose application endpoints
+- Provide service health and metadata
+- Deliver interactive API documentation
+- Load configuration from the application module
 
-## Running Locally
+## Code layout
+
+```text
+applications/FastAPI/
+├── app/
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── health.py
+│   │   └── router.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   └── logging.py
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   └── health.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   └── health_service.py
+│   ├── __init__.py
+│   ├── config.py
+│   └── main.py
+├── tests/
+│   ├── __init__.py
+│   └── test_health.py
+├── .env
+├── README.md
+└── requirements.txt
+```
+
+## How it works
+
+- `app/main.py` creates the FastAPI application and mounts API routers.
+- `app/api/router.py` registers endpoints such as `/health`.
+- `app/services/health_service.py` contains the health-check logic.
+- `app/schemas/health.py` defines the response model.
+- `app/config.py` loads runtime settings and environment values.
+
+## Local development
 
 Install dependencies:
 
@@ -23,64 +58,20 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Start the development server:
-
-```bash
-fastapi dev app/main.py
-```
-
-Or with Uvicorn:
+Run locally:
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-## Health Check
+This module can also be started through the platform-level Docker Compose stack defined in `infrastructure/compose/compose.yml`.
 
-**Request**
+## Health endpoint
+
+Request:
 
 ```http
 GET /health
 ```
 
-**Response**
-
-```json
-{
-  "status": "healthy",
-  "service": "fastapi-demo",
-  "version": "0.1.0",
-  "timestamp": "2026-08-03T00:41:17.121258"
-}
-```
-
-## Project Structure
-
-```text
-applications/
-└── FastAPI/
-    ├── app/
-    │   ├── api/
-    │   │   ├── __init__.py
-    │   │   ├── health.py
-    │   │   └── router.py
-    │   ├── core/
-    │   │   ├── __init__.py
-    │   │   └── logging.py
-    │   ├── schemas/
-    │   │   ├── __init__.py
-    │   │   └── health.py
-    │   ├── services/
-    │   │   ├── __init__.py
-    │   │   └── health_service.py
-    │   ├── __init__.py
-    │   ├── config.py
-    │   └── main.py
-    ├── tests/
-    │   ├── __init__.py
-    │   └── test_health.py
-    ├── .env
-    ├── README.md
-    └── requirements.txt
-```
-
+The service returns a JSON payload showing service status, version, and timestamp.

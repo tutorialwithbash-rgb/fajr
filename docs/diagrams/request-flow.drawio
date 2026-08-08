@@ -1,0 +1,59 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="08GOeOp06GMKsR9y9l_a">
+    <mxGraphModel dx="1344" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-43" edge="1" parent="1" source="3kFce98bJjbgZw6_YmVZ-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=16;" target="3kFce98bJjbgZw6_YmVZ-42" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-46" connectable="0" parent="3kFce98bJjbgZw6_YmVZ-43" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;fontSize=16;" value="HTTP Request" vertex="1">
+          <mxGeometry relative="1" x="-0.0571" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-41" parent="1" style="text;whiteSpace=wrap;fontFamily=Times New Roman;align=center;fontSize=16;" value="Browser / Client" vertex="1">
+          <mxGeometry height="40" width="120" x="310" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-48" edge="1" parent="1" source="3kFce98bJjbgZw6_YmVZ-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=16;" target="3kFce98bJjbgZw6_YmVZ-47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-49" connectable="0" parent="3kFce98bJjbgZw6_YmVZ-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;fontSize=16;" value="Reverse Proxy" vertex="1">
+          <mxGeometry relative="1" x="-0.125" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-42" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;" value="Nginx Gateway&amp;nbsp;&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="310" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-51" edge="1" parent="1" source="3kFce98bJjbgZw6_YmVZ-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=16;" target="3kFce98bJjbgZw6_YmVZ-50" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-53" connectable="0" parent="3kFce98bJjbgZw6_YmVZ-51" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;fontSize=16;" value="Business Logic" vertex="1">
+          <mxGeometry relative="1" x="-0.075" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-47" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;" value="&amp;nbsp;FastAPI Service&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="310" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-55" edge="1" parent="1" source="3kFce98bJjbgZw6_YmVZ-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;fontSize=16;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-56" connectable="0" parent="3kFce98bJjbgZw6_YmVZ-55" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;fontSize=16;" value="JSON Response" vertex="1">
+          <mxGeometry relative="1" x="-0.45" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-50" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;" value="Health Endpoint&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="310" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="3kFce98bJjbgZw6_YmVZ-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Times New Roman;fontSize=16;" value="Client" vertex="1">
+          <mxGeometry height="30" width="60" x="340" y="880" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

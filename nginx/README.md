@@ -1,27 +1,25 @@
-# Nginx
+# Nginx Gateway
 
-This directory contains the Nginx module for the Fajr platform.
+This module contains the Nginx gateway configuration used by the Fajr platform.
 
 ## Purpose
 
-Nginx serves as the platform gateway, managing incoming traffic before forwarding requests to services; backend, frontend, database, redis. The module is designed to evolve incrementally as new traffic management capabilities are introduced.
+Nginx acts as the platform edge gateway, receiving external HTTP traffic and forwarding it to backend services such as the FastAPI application.
 
 ## Responsibilities
 
-Depending on the enabled features, this module may provide:
+- Reverse proxy external requests
+- Route requests to backend services
+- Host gateway-level configuration
+- Provide a foundation for future traffic features such as TLS, caching, and rate limiting
 
-- Reverse Proxy
-- Static Content
-- Path Routing
-- Load Balancing
-- TLS (HTTPS)
-- Caching
-- Compression
-- Security
-- Rate Limiting
-- AI Gateway
+## Current behavior
 
-## Directory Structure
+In the current platform, Nginx forwards requests to the FastAPI service and optionally exposes static or gateway-level routes.
+
+The module does not implement full traffic management yet; it is intended to evolve with the platform.
+
+## Directory layout
 
 ```text
 nginx/
@@ -34,24 +32,13 @@ nginx/
 
 ## Configuration
 
-- **nginx.conf** – Main Nginx configuration.
-- **conf.d/** – Server blocks and feature-specific configuration.
-- **snippets/** – Reusable configuration fragments.
-- **ssl/** – TLS certificates and related configuration.
+- `nginx.conf` — main Nginx configuration file.
+- `conf.d/` — additional server blocks or route-specific configs.
+- `snippets/` — reusable config fragments.
+- `ssl/` — TLS certificates and related files.
 
-## Development
+## Deployment
 
-This module is developed incrementally. Each feature branch adds or extends Nginx capabilities while preserving the existing configuration.
+This module is packaged in the Nginx container image defined at `infrastructure/images/gateway/nginx/Dockerfile` and launched through Docker Compose.
 
-Examples include:
-
-- `feature/edge-reverse-proxy`
-- `feature/edge-static-content`
-- `feature/edge-path-routing`
-- `feature/edge-load-balancing`
-- `feature/edge-tls`
-- `feature/edge-caching`
-- `feature/edge-compression`
-- `feature/edge-security`
-- `feature/edge-rate-limiting`
-- `feature/edge-ai-gateway`
+For platform-level startup instructions, see `docs/getting-started.md`.
